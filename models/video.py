@@ -6,3 +6,11 @@ class Video(db.Model):
 	title = db.Column(db.String(80), nullable=False)
 	duration = db.Column(db.String(10), nullable=False)
 	channel = db.Column(db.String(80), nullable=False)
+
+	def to_json(self) -> dict[str, str]:
+		return {
+			"id": self.id,
+			"title": self.title,
+			"channel": self.channel,
+			"duration": self.duration
+		}
