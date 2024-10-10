@@ -17,3 +17,21 @@
 #### SUGESTÃO DE MELHORIAS
 *   Permitir inserção de vídeo de outros provedores além do youtube
 *   Autenticação
+
+
+## Iniciar o projeto localmente
+````bash
+flask run --host=0.0.0.0 --port=3333 --debug
+````
+#### Informações adicionais do comando:
+ *  ````bash
+    flask run # É o comando padrão de execução.
+    ```` 
+ * ````bash
+    flask run --host=0.0.0.0 --port=3333 # Expõe o servidor na rede e na porta 3333.
+    ````
+   
+ * ````bash
+    flask run --debug # Faz o servidor ficar em watch mode e tem um debugger interativo no navegador.
+    ````
+    
