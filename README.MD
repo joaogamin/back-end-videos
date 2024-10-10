@@ -18,8 +18,17 @@
 *   Permitir inserção de vídeo de outros provedores além do youtube
 *   Autenticação
 
+# Desenvolvimento Local
+
+## Instalar dependências
+
+```bash
+pip install -r requirements.txt
+```
 
 ## Iniciar o projeto localmente
+
+
 ````bash
 flask run --host=0.0.0.0 --port=3333 --debug
 ````
