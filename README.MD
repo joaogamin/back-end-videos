@@ -1,22 +1,24 @@
 # Projeto Back-end
 
+#### Requisitos:
 
-#### Requisitos: 
-- [ ]  Conexão com banco
-- [ ]  /get - listar vídeos
-- [ ]  /post - inserir vídeo (id, title, duration)
-- [ ]  /delete - deleta um vídeo
-- [ ]  /patch - alterar vídeo (replace)
-- [ ]  Documentação do swagger atualizada
+- [x]  Conexão com banco
+- [x]  /get - listar vídeos
+- [x]  /post - inserir vídeo (id, title, duration)
+- [x]  /delete - deleta um vídeo
+- [x]  /patch - alterar vídeo (replace)
+- [x]  Documentação do swagger atualizada
 - [ ]  README atualizado com: funcionalidades, bugs ou observações e pontos de melhoria ou evoluções
 
 #### DOCUMENTAÇÕES OBRIGATÓRIAS
-*   Como usar a solução
-*   Passo a passo para deploy
+
+* Como usar a solução
+* Passo a passo para deploy
 
 #### SUGESTÃO DE MELHORIAS
-*   Permitir inserção de vídeo de outros provedores além do youtube
-*   Autenticação
+
+* Permitir inserção de vídeo de outros provedores além do youtube
+* Autenticação
 
 # Desenvolvimento Local
 
@@ -28,19 +30,20 @@ pip install -r requirements.txt
 
 ## Iniciar o projeto localmente
 
-
 ````bash
 flask run --host=0.0.0.0 --port=3333 --debug
 ````
+
 #### Informações adicionais do comando:
- *  ````bash
+
+*  ````bash
     flask run # É o comando padrão de execução.
     ```` 
- * ````bash
+* ````bash
     flask run --host=0.0.0.0 --port=3333 # Expõe o servidor na rede e na porta 3333.
     ````
-   
- * ````bash
+
+* ````bash
     flask run --debug # Faz o servidor ficar em watch mode e tem um debugger interativo no navegador.
     ````
     
