@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, make_response
+from flask import Flask
 
 from database import db, init_db
 
@@ -14,9 +14,6 @@ db.init_app(app)
 with app.app_context():
 	init_db(db)
 
+	import controllers
 
-@app.route("/")
-def hello_world():
-	res = make_response({"status": 200, "message": "Hello World!"}, 200)
-
-	return res
+	controllers
