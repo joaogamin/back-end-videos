@@ -8,6 +8,31 @@ from utils.get_youtube_video_metadata import get_youtube_video_metadata
 
 @app.route('/videos/<video_id>', methods=["PATCH"])
 def update_video_controller(video_id):
+	"""
+		    Update a video
+		    ---
+		    parameters:
+		      - name: video_id
+		        in: path
+		        type: string
+		        required: true
+		      - name: body
+		        in: body
+		        required: true
+		        schema:
+		          type: object
+		          properties:
+		            id:
+		              type: string
+		              example: "new_id"
+		    responses:
+		      200:
+		        description: Video updated successfully
+		      404:
+		        description: Video not found
+		      409:
+		        description: Video already exists
+		    """
 	data = request.json
 	id = data.get("id")
 

@@ -6,6 +6,21 @@ from services.Videos.delete_video_service import delete_video_service
 
 @app.route('/videos/<video_id>', methods=["DELETE"])
 def delete_video_controller(video_id):
+	"""
+		    Delete a video
+		    ---
+		    parameters:
+		      - name: video_id
+		        in: path
+		        type: string
+		        required: true
+		    responses:
+		      200:
+		        description: Video deleted successfully
+		      404:
+		        description: Video not found
+		    """
+	
 	success = delete_video_service(video_id)
 
 	if not success:

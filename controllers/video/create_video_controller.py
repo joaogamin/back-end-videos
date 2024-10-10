@@ -7,6 +7,27 @@ from utils.get_youtube_video_metadata import get_youtube_video_metadata
 
 @app.route("/videos", methods=["POST"])
 def create_video_controller():
+	"""
+		    Create a new video
+		    ---
+		    parameters:
+		      - name: body
+		        in: body
+		        required: true
+		        schema:
+		          type: object
+		          properties:
+		            id:
+		              type: string
+		    responses:
+		      201:
+		        description: Video created successfully
+		      404:
+		        description: Video not found
+		      409:
+		        description: Video already exists
+		    """
+
 	data = request.json
 	id = data.get("id")
 

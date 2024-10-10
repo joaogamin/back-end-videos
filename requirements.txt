@@ -5,3 +5,4 @@ Flask-SQLAlchemy
 sqlalchemy
 requests
 pg8000
+flasgger
