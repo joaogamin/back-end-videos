@@ -1,3 +1,5 @@
+from typing import Literal, Dict
+
 from database import db
 
 
@@ -7,7 +9,7 @@ class Video(db.Model):
 	duration = db.Column(db.String(10), nullable=False)
 	channel = db.Column(db.String(80), nullable=False)
 
-	def to_json(self) -> dict[str, str]:
+	def to_json(self) -> Dict[Literal["id", "title", "channel", "duration"], str]:
 		return {
 			"id": self.id,
 			"title": self.title,
