@@ -3,3 +3,4 @@ watchdog
 python-dotenv
 Flask-SQLAlchemy
 sqlalchemy
+requests
