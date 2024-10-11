@@ -129,5 +129,6 @@ o [passo a passo](./deploy.md).
 - **Autenticação de usuários**: Implementar um sistema de autenticação para que diferentes usuários possam gerenciar
   suas próprias listas de vídeos.
 - **Pesquisas**: Implementar uma funcionalidade de busca dentro da lista de vídeos armazenados.
+- **Testes**: Implementar testes automatizados (unitários, integração e e2e) para maior consistência e confiabilidade no código.
 
 ----
