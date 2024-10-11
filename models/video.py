@@ -5,9 +5,9 @@ from database import db
 
 class Video(db.Model):
 	id = db.Column(db.String(11), primary_key=True)
-	title = db.Column(db.String(80), nullable=False)
+	title = db.Column(db.String(255), nullable=False)
 	duration = db.Column(db.String(10), nullable=False)
-	channel = db.Column(db.String(80), nullable=False)
+	channel = db.Column(db.String(255), nullable=False)
 
 	def to_json(self) -> Dict[Literal["id", "title", "channel", "duration"], str]:
 		return {

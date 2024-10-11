@@ -44,7 +44,8 @@ def update_video_controller(video_id):
 	if not video_data:
 		return make_response({"status": 404, "message": f"Video with id = {id}, not found on youtube"}, 404)
 
-	video = Video(id=video_data["id"], title=video_data["title"], channel=video_data["channel"], duration=["duration"])
+	video = Video(id=video_data["id"], title=video_data["title"], channel=video_data["channel"],
+				  duration=video_data["duration"])
 
 	response = update_video_service(video_id, video)
 
@@ -52,6 +53,6 @@ def update_video_controller(video_id):
 		return make_response({"status": 404, "message": f"Video with id = {id}, not found"}, 404)
 
 	if response == 409:
-		return make_response({"status": 409, "message": f"Video with id = {id}, already exists"})
+		return make_response({"status": 409, "message": f"Video with id = {id}, already exists"}, 409)
 
 	return make_response({"status": 200}, 200)
